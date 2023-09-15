@@ -1,0 +1,19 @@
+.component {
+    grid-column-start: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.options {
+    border: 1px solid red;
+    grid-column-start: span 2;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modifier {
+    border: 1px solid green
+}

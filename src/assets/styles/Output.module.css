@@ -1,0 +1,99 @@
+.component {
+    grid-column-start: span 3;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    gap: 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--border-color);
+    text-shadow: 3px 3px var(--shadow-color);
+}
+
+.input {
+    height: 60px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    box-shadow: 5px 5px var(--shadow-color);
+}
+.input:focus {
+    outline: none;
+}
+
+.copyBtn {
+    height: 60px;
+    width: 60px;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: 5px 5px var(--shadow-color);
+    border-radius: 16px;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s;
+}
+.copyBtn::after {
+    content: '';
+    position: absolute;
+    top: 45%; 
+    left: 45%;
+    transform: translateX(-50%) translateY(-50%);  
+    width: 15px;
+    height: 20px;
+    border: 4px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--border-color);
+    transition: all 0.3s;
+}
+.copyBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-35%) translateY(-35%);  
+    width: 15px;
+    height: 20px;
+    border: 4px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.copyBtn:hover {
+    border: 1px solid var(--hover-color);
+    background: var(--hover-color);
+}
+.copyBtn:hover::after {
+    background: var(--hover-color);
+    border: 4px solid #fff;
+}
+.copyBtn:hover::before {
+    border: 4px solid #fff;
+    background: #fff;
+}
+
+.modal {
+    position: absolute;
+    padding: 10px;
+    bottom: -40px;
+    font-size: 36px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    opacity: 0;
+    animation: 2s 1 normal fade;
+}
+
+@keyframes fade {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

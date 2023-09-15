@@ -1,0 +1,8 @@
+.logo {
+    font-size: 60px;
+    color: var(--main-color);
+    text-align: left;
+    letter-spacing: 6px;
+    grid-column-start: span 3;
+    text-shadow: 5px 5px var(--shadow-color);
+}
